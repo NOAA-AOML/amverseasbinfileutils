@@ -1058,7 +1058,7 @@ public class BinDecoder {
             for (int i = 0; i < bytes.length; i++) {
                 x = (char) bytes[i];
                 x = (char) (x & 0x00ff);
-                if (x >= 0 && x <= 127) {
+                if (x >= 32 && x <= 126) { //only add printable characters
                     str += x;
                 }
             }
